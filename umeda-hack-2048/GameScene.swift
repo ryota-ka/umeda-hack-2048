@@ -15,6 +15,7 @@ class GameScene: SKScene {
         self.initBoard()
         self.createSwipeRecognizers()
         TileManager.sharedInstance.addTileOf2ToRandomEmptyPosition()
+        ScoreTracker.sharedInstance.score = 0
     }
    
     override func update(currentTime: CFTimeInterval) {
@@ -84,5 +85,6 @@ class GameScene: SKScene {
 
         let animation = SKAction.fadeAlphaTo(1, duration: 3)
         screen.runAction(animation)
+        ScoreTracker.sharedInstance.resetScore()
     }
 }

@@ -15,7 +15,6 @@
 		A366119E1A3E73AD003A70E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A366119C1A3E73AD003A70E2 /* LaunchScreen.xib */; };
 		A36611AA1A3E73AD003A70E2 /* umeda_hack_2048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36611A91A3E73AD003A70E2 /* umeda_hack_2048Tests.swift */; };
 		A36611B41A3E73CB003A70E2 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36611B31A3E73CB003A70E2 /* ColorManager.swift */; };
-		A36611E41A3E7828003A70E2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36611E31A3E7828003A70E2 /* Game.swift */; };
 		A36611E81A3E7CA0003A70E2 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A36611E71A3E7CA0003A70E2 /* images.xcassets */; };
 		A36611EA1A3E7DF1003A70E2 /* ScoreTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36611E91A3E7DF1003A70E2 /* ScoreTracker.swift */; };
 		A36611EE1A3E7F43003A70E2 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36611ED1A3E7F43003A70E2 /* SceneManager.swift */; };
@@ -48,7 +47,6 @@
 		A36611A81A3E73AD003A70E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A36611A91A3E73AD003A70E2 /* umeda_hack_2048Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = umeda_hack_2048Tests.swift; sourceTree = "<group>"; };
 		A36611B31A3E73CB003A70E2 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorManager.swift; path = ../ColorManager.swift; sourceTree = "<group>"; };
-		A36611E31A3E7828003A70E2 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A36611E71A3E7CA0003A70E2 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = images.xcassets; path = ../images.xcassets; sourceTree = "<group>"; };
 		A36611E91A3E7DF1003A70E2 /* ScoreTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTracker.swift; sourceTree = "<group>"; };
 		A36611ED1A3E7F43003A70E2 /* SceneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				A36611F31A3E84F8003A70E2 /* Extension.swift */,
 				A36611F11A3E81AD003A70E2 /* Tile.swift */,
 				A36611ED1A3E7F43003A70E2 /* SceneManager.swift */,
-				A36611E31A3E7828003A70E2 /* Game.swift */,
 				A36611E91A3E7DF1003A70E2 /* ScoreTracker.swift */,
 				A36611951A3E73AD003A70E2 /* GameViewController.swift */,
 				A36611971A3E73AD003A70E2 /* Main.storyboard */,
@@ -246,7 +243,6 @@
 				A36611F81A3E8882003A70E2 /* PositionUtil.swift in Sources */,
 				A36611941A3E73AD003A70E2 /* GameScene.swift in Sources */,
 				A36611F01A3E8131003A70E2 /* TileManager.swift in Sources */,
-				A36611E41A3E7828003A70E2 /* Game.swift in Sources */,
 				A36611961A3E73AD003A70E2 /* GameViewController.swift in Sources */,
 				A36611EE1A3E7F43003A70E2 /* SceneManager.swift in Sources */,
 				A36611F41A3E84F8003A70E2 /* Extension.swift in Sources */,
