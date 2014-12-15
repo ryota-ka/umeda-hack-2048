@@ -16,6 +16,10 @@ class Tile {
             self.bgNode.color = ColorManager.sharedInstance.getColorByNumber(self.number)
             ScoreTracker.sharedInstance.score += self.number
 
+            if self.number == 8 {
+                self.numberNode.fontColor = UIColor(red: 0.98, green: 0.97, blue: 0.96, alpha: 1)
+            }
+
             if self.number == 2048 {
                 SceneManager.sharedInstance.gameScene.showGameClearedLabel()
             }
@@ -29,8 +33,9 @@ class Tile {
         self.bgNode.size = CGSize(width: 68, height: 68)
         self.bgNode.color = ColorManager.sharedInstance.getColorByNumber(self.number)
         self.numberNode.text = String(self.number)
-        self.numberNode.fontColor = UIColor.blackColor()
+        self.numberNode.fontColor = UIColor(red: 0.45, green: 0.43, blue: 0.40, alpha: 1)
         self.numberNode.fontName = "HiraKakuProN"
+        self.numberNode.position = CGPoint(x: 0, y: -10)
         self.bgNode.setScale(0)
         self.bgNode.addChild(self.numberNode)
         let scaleAnimation = SKAction.scaleTo(1, duration: 0.2)

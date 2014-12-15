@@ -9,7 +9,6 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    let scoreLabel: SKLabelNode = SKLabelNode(text: "SCORE: 0")
     let board = SKSpriteNode(imageNamed: "board")
 
     override func didMoveToView(view: SKView) {
