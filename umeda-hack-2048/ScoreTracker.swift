@@ -31,6 +31,22 @@ class ScoreTracker {
         set {
             let ud = NSUserDefaults.standardUserDefaults()
             ud.setObject(self.score, forKey: "highestScore")
+            var ranking = self.ranking
+            ranking.append(self.score)
+            sort(&ranking) { $0 > $1 }
+            ud.setObject([Int](ranking[0...4]), forKey: "ranking")
+        }
+    }
+
+    var ranking: [Int] {
+        get {
+            let ud = NSUserDefaults.standardUserDefaults()
+            if let ranking = ud.objectForKey("ranking") as? [Int] {
+                return ranking
+            } else {
+                var emptyRanking: [Int] = []
+                return emptyRanking
+            }
         }
     }
 

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "umeda-hack-2048/ScoreTracker.swift"
-            timestampString = "440322220.733702"
+            timestampString = "440323651.82327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "ScoreTracker"
             landmarkType = "3">
          </BreakpointContent>

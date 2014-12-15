@@ -95,21 +95,21 @@
 		A366118C1A3E73AD003A70E2 /* umeda-hack-2048 */ = {
 			isa = PBXGroup;
 			children = (
-				A36611B31A3E73CB003A70E2 /* ColorManager.swift */,
-				A36611E71A3E7CA0003A70E2 /* images.xcassets */,
 				A366118F1A3E73AD003A70E2 /* AppDelegate.swift */,
+				A36611B31A3E73CB003A70E2 /* ColorManager.swift */,
+				A36611F31A3E84F8003A70E2 /* Extension.swift */,
 				A36611911A3E73AD003A70E2 /* GameScene.sks */,
 				A36611931A3E73AD003A70E2 /* GameScene.swift */,
-				A36611EF1A3E8131003A70E2 /* TileManager.swift */,
+				A36611951A3E73AD003A70E2 /* GameViewController.swift */,
+				A36611E71A3E7CA0003A70E2 /* images.xcassets */,
+				A366119C1A3E73AD003A70E2 /* LaunchScreen.xib */,
+				A36611971A3E73AD003A70E2 /* Main.storyboard */,
 				A36611F71A3E8882003A70E2 /* PositionUtil.swift */,
-				A36611F31A3E84F8003A70E2 /* Extension.swift */,
-				A36611F11A3E81AD003A70E2 /* Tile.swift */,
 				A36611ED1A3E7F43003A70E2 /* SceneManager.swift */,
 				A36611E91A3E7DF1003A70E2 /* ScoreTracker.swift */,
-				A36611951A3E73AD003A70E2 /* GameViewController.swift */,
-				A36611971A3E73AD003A70E2 /* Main.storyboard */,
-				A366119C1A3E73AD003A70E2 /* LaunchScreen.xib */,
 				A366118D1A3E73AD003A70E2 /* Supporting Files */,
+				A36611F11A3E81AD003A70E2 /* Tile.swift */,
+				A36611EF1A3E8131003A70E2 /* TileManager.swift */,
 			);
 			path = "umeda-hack-2048";
 			sourceTree = "<group>";
