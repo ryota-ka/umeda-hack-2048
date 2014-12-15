@@ -48,14 +48,15 @@ class ScoreTracker {
             if let ranking = ud.objectForKey("ranking") as? [Int] {
                 return ranking
             } else {
-                var emptyRanking: [Int] = []
+                var emptyRanking: [Int] = [0, 0, 0, 0, 0]
+                ud.setObject(emptyRanking, forKey: "ranking")
                 return emptyRanking
             }
         }
     }
 
     private var label: SKLabelNode
-    private var rankingLabel: SKLabelNode
+    private var rankingLabels: [SKLabelNode]
 
     class var sharedInstance: ScoreTracker {
         return scoreTracker
@@ -69,12 +70,16 @@ class ScoreTracker {
         self.label.fontSize = 20
         SceneManager.sharedInstance.gameScene.addChild(self.label)
 
-        self.rankingLabel = SKLabelNode(text: "")
-        self.rankingLabel.color = UIColor.whiteColor()
-        self.rankingLabel.fontName = "HiraKakuProN"
-        self.rankingLabel.fontSize = 18
-        self.rankingLabel.position = CGPoint(x: 160, y: 400)
-        SceneManager.sharedInstance.gameScene.addChild(self.rankingLabel)
+        self.rankingLabels = [SKLabelNode(), SKLabelNode(), SKLabelNode(), SKLabelNode(), SKLabelNode()]
+
+        for i in 0..<5 {
+            self.rankingLabels[i] = SKLabelNode(text: "#\(i): 0")
+            self.rankingLabels[i].color = UIColor.whiteColor()
+            self.rankingLabels[i].fontName = "HiraKakuProN"
+            self.rankingLabels[i].fontSize = 18
+            self.rankingLabels[i].position = CGPoint(x: 160, y: 500 - 20 * i)
+            SceneManager.sharedInstance.gameScene.addChild(self.rankingLabels[i])
+        }
     }
 
     private func updateLabel() {
@@ -82,13 +87,9 @@ class ScoreTracker {
     }
 
     private func updateRankingLabel() {
-        var text = ""
-        var i = 0
-        for score in self.ranking {
-            i++
-            text += "#\(i): \(score)  "
+        for i in 0..<5 {
+            self.rankingLabels[i].text = "#\(i+1): \(self.ranking[i])"
         }
-        self.rankingLabel.text = text
     }
 
     func resetScore() {
