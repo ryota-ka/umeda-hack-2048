@@ -83,7 +83,7 @@ class GameScene: SKScene {
         screen.addChild(label)
         self.addChild(screen)
 
-        let animation = SKAction.fadeAlphaTo(1, duration: 1)
+        let animation = SKAction.fadeAlphaTo(1, duration: 3)
         screen.runAction(animation)
     }
 }

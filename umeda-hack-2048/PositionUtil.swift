@@ -11,19 +11,24 @@ import UIKit
 
 private let positionUtil = PositionUtil()
 
+private let a = 44
+private let b = 121
+private let c = 198
+private let d = 276
+
 class PositionUtil {
     private let tilePositions: [[CGPoint]] = [
         [
-            CGPoint(x: 44, y: 272), CGPoint(x: 120, y: 272), CGPoint(x: 196, y: 272), CGPoint(x: 272, y: 272)
+            CGPoint(x: a, y: d), CGPoint(x: b, y: d), CGPoint(x: c, y: d), CGPoint(x: d, y: d)
         ],
         [
-            CGPoint(x: 44, y: 196), CGPoint(x: 120, y: 196), CGPoint(x: 196, y: 196), CGPoint(x: 272, y: 196)
+            CGPoint(x: a, y: c), CGPoint(x: b, y: c), CGPoint(x: c, y: c), CGPoint(x: d, y: c)
         ],
         [
-            CGPoint(x: 44, y: 120), CGPoint(x: 120, y: 120), CGPoint(x: 196, y: 120), CGPoint(x: 272, y: 120)
+            CGPoint(x: a, y: b), CGPoint(x: b, y: b), CGPoint(x: c, y: b), CGPoint(x: d, y: b)
         ],
         [
-            CGPoint(x: 44, y: 44), CGPoint(x: 120, y: 44), CGPoint(x: 196, y: 44), CGPoint(x: 272, y: 44)
+            CGPoint(x: a, y: a), CGPoint(x: b, y: a), CGPoint(x: c, y: a), CGPoint(x: d, y: a)
         ]
     ]
 
