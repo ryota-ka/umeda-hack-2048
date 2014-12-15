@@ -15,6 +15,10 @@ class ScoreTracker {
     var score: Int = 0 {
         didSet {
             self.updateLabel()
+
+            if self.score == 0 {
+                self.updateRankingLabel()
+            }
         }
     }
 
@@ -51,7 +55,7 @@ class ScoreTracker {
     }
 
     private var label: SKLabelNode
-    private var highestScoreLabel: SKLabelNode
+    private var rankingLabel: SKLabelNode
 
     class var sharedInstance: ScoreTracker {
         return scoreTracker
@@ -60,20 +64,31 @@ class ScoreTracker {
     private init() {
         self.label = SKLabelNode(text: "Score: 0")
         self.label.fontColor = UIColor.whiteColor()
-        self.label.position = CGPoint(x:160, y: 400)
+        self.label.position = CGPoint(x:160, y: 340)
         self.label.fontName = "HiraKakuProN"
+        self.label.fontSize = 20
         SceneManager.sharedInstance.gameScene.addChild(self.label)
 
-        self.highestScoreLabel = SKLabelNode(text: "Highest Score: 0")
-        self.highestScoreLabel.fontColor = UIColor.whiteColor()
-        self.highestScoreLabel.position = CGPoint(x:160, y: 450)
-        self.highestScoreLabel.fontName = "HiraKakuProN"
-        SceneManager.sharedInstance.gameScene.addChild(self.highestScoreLabel)
+        self.rankingLabel = SKLabelNode(text: "")
+        self.rankingLabel.color = UIColor.whiteColor()
+        self.rankingLabel.fontName = "HiraKakuProN"
+        self.rankingLabel.fontSize = 18
+        self.rankingLabel.position = CGPoint(x: 160, y: 400)
+        SceneManager.sharedInstance.gameScene.addChild(self.rankingLabel)
     }
 
     private func updateLabel() {
         self.label.text = "Score: \(self.score)"
-        self.highestScoreLabel.text = "Highest Score: \(self.highestScore)"
+    }
+
+    private func updateRankingLabel() {
+        var text = ""
+        var i = 0
+        for score in self.ranking {
+            i++
+            text += "#\(i): \(score)  "
+        }
+        self.rankingLabel.text = text
     }
 
     func resetScore() {
